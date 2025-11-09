@@ -1,0 +1,231 @@
+
+
+
+:root {
+  --bg-top: #0b0b10;
+  --bg-bottom: #2a0600;
+  --card: #1a1015;
+  --card-border: rgba(255, 255, 255, 0.06);
+  --ink: #f9f3ff;
+  --muted: #c2b5cf;
+  --lava-main: #ff6a00;
+  --lava-soft: #ffb347;
+  --lava-deep: #b31400;
+  --accent: #ffd166;
+  --shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
+}
+
+/* RESET BASIC */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; padding: 0; }
+
+body.lava-bg {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    "Noto Sans", "Liberation Sans", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255,120,0,0.45), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(255,60,0,0.4), transparent 60%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 32px 16px 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lava-hero::before,
+.lava-hero::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  bottom: -40px;
+  height: 90px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255,255,255,0.15), transparent 60%),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255,106,0,0.9) 0px,
+      rgba(255,106,0,0.9) 6px,
+      rgba(179,20,0,0.95) 6px,
+      rgba(179,20,0,0.95) 12px
+    );
+  opacity: 0.45;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.logo {
+  font-size: 44px;
+  line-height: 1;
+  text-shadow: 0 0 18px rgba(0,0,0,0.7);
+}
+
+.title {
+  margin: 8px 0 4px;
+  font-size: clamp(28px, 5vw, 44px);
+  letter-spacing: 1.4px;
+  font-weight: 900;
+  color: #fff5f0;
+  text-shadow:
+    2px 2px 0 #2b0300,
+    -2px 2px 0 #2b0300,
+    2px -2px 0 #2b0300,
+    -2px -2px 0 #2b0300,
+    0 0 20px rgba(255,90,0,0.7);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--lava-soft);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+/* LANGUAGE SWITCHER */
+.lang-nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 18px;
+}
+
+.lang-nav a {
+  color: #fff3e0;
+  text-decoration: none;
+  font-weight: 700;
+  background: rgba(255,106,0,0.12);
+  border: 1px solid rgba(255,179,71,0.7);
+  padding: 6px 14px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  transition: background 0.15s ease-out, transform 0.1s ease-out;
+}
+
+.lang-nav a:hover {
+  background: rgba(255,106,0,0.28);
+  transform: translateY(-1px);
+}
+
+.lang-nav span {
+  color: rgba(255,224,178,0.7);
+}
+
+/* LAYOUT */
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 16px 42px;
+}
+
+/* CARDS */
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 18px 18px 10px;
+  margin: 14px 0;
+  border: 1px solid var(--card-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-lava::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,106,0,0.12),
+      transparent 40%,
+      transparent 60%,
+      rgba(255,179,71,0.12)
+    );
+  mix-blend-mode: screen;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* HEADINGS & TEXT */
+h2 {
+  margin: 6px 0 10px;
+  font-size: clamp(20px, 3.2vw, 26px);
+  color: var(--accent);
+}
+
+h3 {
+  margin: 18px 0 8px;
+  color: var(--lava-soft);
+}
+
+p {
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+ul {
+  margin: 6px 0 12px 20px;
+  line-height: 1.6;
+}
+
+a {
+  color: #ffd166;
+}
+
+a:hover {
+  color: #ffe9a6;
+}
+
+/* META INFO LIST */
+.meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.meta strong { color: var(--accent); }
+
+.meta .editable {
+  background: rgba(255,179,71,0.08);
+  padding: 0 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,179,71,0.35);
+}
+
+/* CODE STYLE */
+code {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+    "Liberation Mono", monospace;
+  font-size: 0.95em;
+  color: #ffe6b3;
+}
+
+/* FOOTER */
+.footer-note {
+  text-align: center;
+}
+
+.footer-note p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (min-width: 640px) {
+  .meta {
+    grid-template-columns: 1fr 1fr;
+  }
+}
