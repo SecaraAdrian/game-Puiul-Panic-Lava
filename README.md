@@ -11,7 +11,7 @@
       <sub>Apasă pe badge sau scanează QR-ul.</sub>
     </td>
     <td>
-      <img src="qr%20puiul.jpeg" alt="QR pentru descărcare" width="160">
+      <img src="qr-puiul.jpeg" alt="QR pentru descărcare" width="160">
     </td>
   </tr>
 </table>
