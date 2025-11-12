@@ -1,17 +1,17 @@
-# Puiul-Panic-Lava-legal
+# panic-at-chicken-legal
 ## 📲 Descarcă jocul meu pe Google Play
 
 <table>
   <tr>
     <td align="center">
-      <a href="[https://play.google.com/store/apps/details?id=com.secax.puiulpanicat](https://play.google.com/store/search?q=PUIUL%20PANIC%20LAVA&c=apps)" target="_blank">
+      <a href="[https://play.google.com/store/search?q=PUIUL%20PANIC%20LAVA&c=apps" target="_blank">
         <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="80">
       </a>
       <br/>
       <sub>Apasă pe badge sau scanează QR-ul.</sub>
     </td>
     <td>
-      <img src="qr-puiul.jpeg" alt="QR pentru descărcare" width="160">
+      <img src="qr%20puiul.jpeg" alt="QR pentru descărcare" width="160">
     </td>
   </tr>
 </table>
